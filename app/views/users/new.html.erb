@@ -1,0 +1,52 @@
+<h1>Sign Up</h1>
+
+<%= form_for @user, html: {class: "form"} do |f| %>
+
+	<% if @user.errors.any? %>
+		<ul>
+			<% @user.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+		<ul>
+	<% end %>
+
+	<div class="form-group row">
+		<label>Email:</label><br>
+		<div class="col-sm-6">
+			<%= f.text_field :email, class: "form-control" %>
+		</div>
+	</div>
+
+	<div class="form-group row">
+		<label>First Name:</label><br>
+		<div class="col-sm-6">
+			<%= f.text_field :first_name, class: "form-control" %>
+		</div>
+	</div>
+
+	<div class="form-group row">
+		<label>Last Name:</label><br>
+		<div class="col-sm-6">
+			<%= f.text_field :last_name, class: "form-control" %>
+		</div>
+	</div>
+
+	<div class="form-group row">
+		<label>Password:</label><br>
+		<div class="col-sm-6">
+			<%= f.password_field :password, class: "form-control" %>
+		</div>
+	</div>
+
+	<div class="form-group row">
+		<label>Confirm Password:</label><br>
+		<div class="col-sm-6">
+			<%= f.password_field :password_confirmation, class: "form-control" %>
+		</div>
+	</div>
+
+	<div class="form-group row">
+		<%= f.submit("Sign Up", class: "btn btn-primary") %>
+	</div>
+
+<% end %>

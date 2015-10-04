@@ -1,0 +1,75 @@
+ <h1><%= @restaurant.name %></h1>
+ 
+<p>
+  <strong>Address:</strong>
+  <%= @restaurant.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @restaurant.city %>
+</p>
+
+<p>
+  <strong>Postal Code:</strong>
+  <%= @restaurant.postal_code %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @restaurant.capacity %>
+</p>
+
+<p>
+  <strong>Cuisine Type:</strong>
+  <%= @restaurant.cuisine_type.name %>
+</p>
+
+<p>
+  <strong>Phone Number:</strong>
+  <%= @restaurant.phone_number %>
+</p>
+
+<h2>All Reservations</h2>
+
+<% @restaurant.reservations.each do |reservation| %>
+  <p>
+    <strong>Reserved At: </strong>
+    <%= reservation.reserved_at %>
+    <strong>Party Size: </strong>
+    <%= reservation.party_size %>
+  </p>
+<% end %>
+</p>
+
+<h2>Make A Reservation</h2>
+
+<% if @reservation.errors.any? %>
+   <ul>
+      <% @reservation.errors.messages.each do |message| %>
+        <li><%= message %>
+      <% end %>
+   </ul>  
+<% end %>
+
+<%= form_for [@restaurant, @reservation] do |f| %>
+
+  <p>
+    Party size:
+    <%= f.text_field :party_size %>
+  </p>
+
+  <p>
+    Date and Time:
+    <%= f.datetime_select :reserved_at %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Restaurants', restaurants_path %>
+<%= link_to 'Cuisines', cuisine_types_path %>

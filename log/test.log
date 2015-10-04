@@ -1,0 +1,90 @@
+  [1m[36m (126.4ms)[0m  [1mDROP DATABASE IF EXISTS "resto_test"[0m
+  [1m[35m (457.9ms)[0m  CREATE DATABASE "resto_test" ENCODING = 'unicode'
+  [1m[36mSQL (2.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (27.3ms)[0m  CREATE TABLE "cuisine_types" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (14.6ms)[0m  [1mCREATE TABLE "reservations" ("id" serial primary key, "restaurant_id" integer, "user_id" integer, "party_size" integer, "reserved_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (17.8ms)[0m  CREATE TABLE "restaurants" ("id" serial primary key, "name" character varying, "address" character varying, "capacity" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "cuisine_type_id" integer, "city" character varying, "postal_code" character varying, "phone_number" character varying) 
+  [1m[36m (9.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.7ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (2.2ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.8ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (2.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150911033535')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150906223250')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150908032238')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150908032452')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150911010343')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150911032804')
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.3ms)[0m  ALTER TABLE "cuisine_types" DISABLE TRIGGER ALL;ALTER TABLE "reservations" DISABLE TRIGGER ALL;ALTER TABLE "restaurants" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "cuisine_types"
+  [1m[36mFixture Insert (1.1ms)[0m  [1mINSERT INTO "cuisine_types" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-09-12 02:07:16', '2015-09-12 02:07:16', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "cuisine_types" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-09-12 02:07:16', '2015-09-12 02:07:16', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "reservations"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "reservations" ("restaurant_id", "user_id", "party_size", "reserved_at", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2015-09-10 23:35:35.000000', '2015-09-12 02:07:16', '2015-09-12 02:07:16', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "reservations" ("restaurant_id", "user_id", "party_size", "reserved_at", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2015-09-10 23:35:35.000000', '2015-09-12 02:07:16', '2015-09-12 02:07:16', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "restaurants"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "restaurants" ("name", "address", "capacity", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2015-09-12 02:07:16', '2015-09-12 02:07:16', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "restaurants" ("name", "address", "capacity", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2015-09-12 02:07:16', '2015-09-12 02:07:16', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-09-12 02:07:16', '2015-09-12 02:07:16', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-09-12 02:07:16', '2015-09-12 02:07:16', 298486374)[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "cuisine_types" ENABLE TRIGGER ALL;ALTER TABLE "reservations" ENABLE TRIGGER ALL;ALTER TABLE "restaurants" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+RestaurantTest: test_the_fixture_should_be_valid
+------------------------------------------------
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "cuisine_types" DISABLE TRIGGER ALL;ALTER TABLE "reservations" DISABLE TRIGGER ALL;ALTER TABLE "restaurants" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "cuisine_types"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "cuisine_types" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-09-12 02:09:20', '2015-09-12 02:09:20', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "cuisine_types" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-09-12 02:09:20', '2015-09-12 02:09:20', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "reservations"[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO "reservations" ("restaurant_id", "user_id", "party_size", "reserved_at", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2015-09-10 23:35:35.000000', '2015-09-12 02:09:20', '2015-09-12 02:09:20', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "reservations" ("restaurant_id", "user_id", "party_size", "reserved_at", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2015-09-10 23:35:35.000000', '2015-09-12 02:09:20', '2015-09-12 02:09:20', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "restaurants"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "restaurants" ("name", "address", "capacity", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2015-09-12 02:09:20', '2015-09-12 02:09:20', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "restaurants" ("name", "address", "capacity", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2015-09-12 02:09:20', '2015-09-12 02:09:20', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-09-12 02:09:20', '2015-09-12 02:09:20', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-09-12 02:09:20', '2015-09-12 02:09:20', 298486374)[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "cuisine_types" ENABLE TRIGGER ALL;ALTER TABLE "reservations" ENABLE TRIGGER ALL;ALTER TABLE "restaurants" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+RestaurantTest: test_the_fixture_should_be_valid
+------------------------------------------------
+  [1m[36mRestaurant Load (1.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  ALTER TABLE "cuisine_types" DISABLE TRIGGER ALL;ALTER TABLE "reservations" DISABLE TRIGGER ALL;ALTER TABLE "restaurants" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "cuisine_types"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "cuisine_types" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-09-12 02:13:19', '2015-09-12 02:13:19', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "cuisine_types" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-09-12 02:13:19', '2015-09-12 02:13:19', 298486374)
+  [1m[36mFixture Delete (1.2ms)[0m  [1mDELETE FROM "reservations"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "reservations" ("restaurant_id", "user_id", "party_size", "reserved_at", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2015-09-10 23:35:35.000000', '2015-09-12 02:13:19', '2015-09-12 02:13:19', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "reservations" ("restaurant_id", "user_id", "party_size", "reserved_at", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2015-09-10 23:35:35.000000', '2015-09-12 02:13:19', '2015-09-12 02:13:19', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "restaurants"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "restaurants" ("name", "address", "capacity", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2015-09-12 02:13:19', '2015-09-12 02:13:19', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "restaurants" ("name", "address", "capacity", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, '2015-09-12 02:13:19', '2015-09-12 02:13:19', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-09-12 02:13:19', '2015-09-12 02:13:19', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-09-12 02:13:19', '2015-09-12 02:13:19', 298486374)[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "cuisine_types" ENABLE TRIGGER ALL;ALTER TABLE "reservations" ENABLE TRIGGER ALL;ALTER TABLE "restaurants" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+RestaurantTest: test_must_have_a_valid_name
+-------------------------------------------
+  [1m[36mRestaurant Load (0.5ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+RestaurantTest: test_the_fixture_should_be_valid
+------------------------------------------------
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m

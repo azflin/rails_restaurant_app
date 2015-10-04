@@ -1,0 +1,20 @@
+<h1> Cuisine Types </h1> 
+
+<table>
+	<tr>
+		<th>Cuisine Type</th>
+		<th>Restaurants</th>
+	</tr>
+	<% @cuisine_types.each do |cuisine| %>
+		<tr>
+			<td><%= cuisine.name %></td>
+			<td><ul>
+				<% cuisine.restaurants.each do |restaurant| %>
+					<li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+				<% end %>
+			</ul>
+		</tr>
+	<% end %>
+</table>
+
+<%= link_to 'Restaurants', restaurants_path %>
