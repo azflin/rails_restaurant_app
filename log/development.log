@@ -12861,3 +12861,762 @@ Started GET "/assets/cuisine_types.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612
 
 
 Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-10-08 19:04:18 -0400
+
+
+Started GET "/restaurants" for ::1 at 2015-10-11 18:02:45 -0400
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.2) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.2) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.2) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.2) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.1ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.4ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (54.6ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (139.1ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-10-11 18:02:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (1.7ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  [1m[36mCuisineType Load (1.3ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCuisineType Load (0.3ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered restaurants/index.html.erb within layouts/application (47.5ms)
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL
+Completed 200 OK in 479ms (Views: 447.5ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/assets/application.self-d860154f076041e9c011538377c533bdc68828898ec9f4cd9bae33547f22ac86.css?body=1" for ::1 at 2015-10-11 18:02:58 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-10-11 18:02:58 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-10-11 18:02:58 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-11 18:02:58 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-10-11 18:02:58 -0400
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-10-11 18:02:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 18:02:59 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-10-11 18:02:59 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-10-11 18:02:59 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-10-11 18:02:59 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-10-11 18:02:59 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-10-11 18:02:59 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-10-11 18:02:59 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-10-11 18:02:59 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-10-11 18:02:59 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 18:02:59 -0400
+
+
+Started GET "/assets/cuisine_types.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-11 18:02:59 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-10-11 18:02:59 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-10-11 18:02:59 -0400
+
+
+Started GET "/restaurants/7" for ::1 at 2015-10-11 18:04:57 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2015-10-11 18:04:57 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL
+Completed 200 OK in 82ms (Views: 81.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2015-10-11 18:05:00 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL[0m
+Completed 200 OK in 101ms (Views: 100.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-11 18:13:09 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wAuAPp1+zRVAfZI1iJ9YQXOf6KXEBiSP8uyv1b+lPspMciP9iAGfe3eq7mF5TaqUDYqqiVURBNHiMkYGfR3O3g==", "email"=>"allenlin1992@hotmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "allenlin1992@hotmail.com"]]
+Redirected to http://localhost:3000/restaurants
+Completed 302 Found in 72ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-10-11 18:13:09 -0400
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mCuisineType Load (0.3ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCuisineType Load (0.3ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered restaurants/index.html.erb within layouts/application (10.7ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Completed 200 OK in 106ms (Views: 104.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/restaurants/6" for ::1 at 2015-10-11 18:13:12 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mRestaurant Load (1.4ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCuisineType Load (0.3ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mReservation Load (0.3ms)[0m  [1mSELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1[0m  [["restaurant_id", 6]]
+  Rendered restaurants/show.html.erb within layouts/application (299.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" = $1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" = $1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 408ms (Views: 395.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-10-11 18:13:16 -0400
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  [1m[36mCuisineType Load (0.3ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCuisineType Load (0.2ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered restaurants/index.html.erb within layouts/application (9.2ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" = $1  [["id", 5]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" = $1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 97ms (Views: 94.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/restaurants/7" for ::1 at 2015-10-11 18:20:18 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" = $1  [["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCuisineType Load (0.2ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mReservation Load (0.2ms)[0m  SELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1  [["restaurant_id", 7]]
+  Rendered restaurants/show.html.erb within layouts/application (4.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Completed 200 OK in 92ms (Views: 88.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/restaurants/7/reservations" for ::1 at 2015-10-11 18:20:23 -0400
+Processing by ReservationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ba3AqEbVkDl8wmhdyO4il0i/8aunUS/Y5PzE4eMqhV2J1GNrU6rCV0sVFAk5PNBCNqqzhzZGD4b0Ii0yIZJ1SQ==", "reservation"=>{"party_size"=>"1234", "reserved_at(1i)"=>"2015", "reserved_at(2i)"=>"10", "reserved_at(3i)"=>"11", "reserved_at(4i)"=>"22", "reserved_at(5i)"=>"20"}, "commit"=>"Create Reservation", "restaurant_id"=>"7"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mSELECT SUM("reservations"."party_size") FROM "reservations" WHERE (restaurant_id = 7 and reserved_at > '2015-10-11 22:00:00.000000' and reserved_at < '2015-10-11 22:59:59.999999')[0m
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mCuisineType Load (0.2ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mReservation Load (0.3ms)[0m  [1mSELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1[0m  [["restaurant_id", 7]]
+  Rendered restaurants/show.html.erb within layouts/application (6.7ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" = $1  [["id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" = $1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 107ms (Views: 97.5ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/restaurants/7/reservations" for ::1 at 2015-10-11 18:20:28 -0400
+Processing by ReservationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vHV7En7DY5aCYNZ5+OS7dBb8TDnOhnmSPTUSyxcLbCAwDNjRa7wx+LW3qi0JNkmhaOkOFV+RWcwt6/sY1bOcNA==", "reservation"=>{"party_size"=>"12", "reserved_at(1i)"=>"2015", "reserved_at(2i)"=>"10", "reserved_at(3i)"=>"11", "reserved_at(4i)"=>"22", "reserved_at(5i)"=>"20"}, "commit"=>"Create Reservation", "restaurant_id"=>"7"}
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("reservations"."party_size") FROM "reservations" WHERE (restaurant_id = 7 and reserved_at > '2015-10-11 22:00:00.000000' and reserved_at < '2015-10-11 22:59:59.999999')
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mSQL (2.8ms)[0m  INSERT INTO "reservations" ("party_size", "reserved_at", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["party_size", 12], ["reserved_at", "2015-10-11 22:20:00.000000"], ["restaurant_id", 7], ["created_at", "2015-10-11 22:20:28.085608"], ["updated_at", "2015-10-11 22:20:28.085608"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/7
+Completed 302 Found in 14ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/restaurants/7" for ::1 at 2015-10-11 18:20:28 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" = $1  [["id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCuisineType Load (0.2ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mReservation Load (0.5ms)[0m  SELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1  [["restaurant_id", 7]]
+  Rendered restaurants/show.html.erb within layouts/application (6.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Completed 200 OK in 95ms (Views: 91.3ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-10-11 18:22:37 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SxQWCKUsSI7QaTSWQdcorBKOeiXY24nzmYd5pJrVzOjHbbXLsFMa4Oe+SMKwBdp5bJs4CUnMqa2JWZB3WG08/A=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-10-11 18:22:37 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL[0m
+Completed 200 OK in 106ms (Views: 105.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2015-10-11 18:22:45 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL
+Completed 200 OK in 139ms (Views: 137.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/new" for ::1 at 2015-10-11 18:22:51 -0400
+
+ActionController::RoutingError (No route matches [GET] "/new"):
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (92.3ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (56.5ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/allenlin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (127.5ms)
+
+
+Started GET "/sign_up" for ::1 at 2015-10-11 18:23:26 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL[0m
+Completed 200 OK in 97ms (Views: 96.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-10-11 18:23:32 -0400
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.5ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  [1m[36mCuisineType Load (0.3ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCuisineType Load (0.3ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered restaurants/index.html.erb within layouts/application (13.8ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL
+Completed 200 OK in 96ms (Views: 93.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/login" for ::1 at 2015-10-11 18:23:37 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL[0m
+Completed 200 OK in 80ms (Views: 79.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-11 18:24:48 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PrzUcVFlZKZ+CFxuyu4tpDjTkRkQqmDIozu3ZV5yZIayxXeyRBo2yEnfIDo7PN9xRsbTNYG9QJaz5V62nMqUkg==", "email"=>"test@hotmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "test@hotmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL[0m
+Completed 200 OK in 77ms (Views: 75.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-11 18:28:44 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yYiuzQf0x3FICUua2BbLkypuJ7Ljw6J/4xsrdV7gLQlF8Q0OEouVH3/eN84pxDlGVHtlnnLUgiHzxcKmnFjdHQ==", "email"=>"allenlin1992@hotmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "allenlin1992@hotmail.com"]]
+Redirected to http://localhost:3000/restaurants
+Completed 302 Found in 66ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-10-11 18:28:44 -0400
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mCuisineType Load (0.2ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCuisineType Load (0.2ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered restaurants/index.html.erb within layouts/application (8.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Completed 200 OK in 140ms (Views: 138.5ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-10-11 18:28:45 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uzc6KEbOT/2Xh93ogVIm87R9Y1n4rkqaaAAcwArSsK43TpnrU7Edk6BQobxwgNQmymghdWm5asR43vUTyGpAug=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-10-11 18:28:46 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL[0m
+Completed 200 OK in 126ms (Views: 125.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2015-10-11 18:30:36 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL
+Completed 200 OK in 108ms (Views: 106.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/application.self-d860154f076041e9c011538377c533bdc68828898ec9f4cd9bae33547f22ac86.css?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/cuisine_types.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-10-11 18:30:37 -0400
+
+
+Started GET "/login" for ::1 at 2015-10-11 18:31:41 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL[0m
+Completed 200 OK in 113ms (Views: 111.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-d860154f076041e9c011538377c533bdc68828898ec9f4cd9bae33547f22ac86.css?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/cuisine_types.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-10-11 18:31:41 -0400
+
+
+Started GET "/login" for ::1 at 2015-10-11 18:31:45 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL
+Completed 200 OK in 94ms (Views: 93.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2015-10-11 18:31:47 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL[0m
+Completed 200 OK in 81ms (Views: 80.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2015-10-11 18:31:55 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL
+Completed 200 OK in 104ms (Views: 102.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-d860154f076041e9c011538377c533bdc68828898ec9f4cd9bae33547f22ac86.css?body=1" for ::1 at 2015-10-11 18:31:55 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-10-11 18:31:55 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-10-11 18:31:55 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-11 18:31:55 -0400
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-10-11 18:31:55 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-11 18:31:55 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-10-11 18:31:55 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-10-11 18:31:55 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-10-11 18:31:55 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-10-11 18:31:55 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-10-11 18:31:56 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-10-11 18:31:56 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-10-11 18:31:56 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-10-11 18:31:56 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-10-11 18:31:56 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-10-11 18:31:56 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-11 18:31:56 -0400
+
+
+Started GET "/assets/cuisine_types.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-11 18:31:56 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-10-11 18:31:56 -0400
+
+
+Started GET "/sign_up" for ::1 at 2015-10-11 18:31:58 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL[0m
+Completed 200 OK in 90ms (Views: 88.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-10-11 18:32:58 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3blKPjg7MEmKTT7BQNBcdOnrbHkj6uB6utOIbxF+b8hRwOn9LURiJ72aQpWxAq6hl/4uVbL9wCSqDWG808af3A==", "user"=>{"email"=>"test@hotmail.com", "first_name"=>"Test", "last_name"=>"User", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test@hotmail.com"], ["first_name", "Test"], ["last_name", "User"], ["password_digest", "$2a$10$DBa/bb5I2/i4XYTpHmBg2ORYMhVIdCuVau9GBeA4o16cONwZb1c76"], ["created_at", "2015-10-11 22:32:58.109353"], ["updated_at", "2015-10-11 22:32:58.109353"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/restaurants
+Completed 302 Found in 75ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-10-11 18:32:58 -0400
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mCuisineType Load (0.2ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCuisineType Load (0.2ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered restaurants/index.html.erb within layouts/application (10.1ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL[0m
+Completed 200 OK in 123ms (Views: 121.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/login" for ::1 at 2015-10-11 18:34:34 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL
+Completed 200 OK in 98ms (Views: 96.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/sign_up" for ::1 at 2015-10-11 18:34:35 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL[0m
+Completed 200 OK in 102ms (Views: 96.8ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/users" for ::1 at 2015-10-11 18:34:50 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y9ng61PIn0ja4gQKboB193jJ43NR7qwn3RXjPdczbXNHoEMoRrfNJu01eF6fUociBtyhX8D5jHnNywruFYudZw==", "user"=>{"email"=>"a@hotmail.com", "first_name"=>"Allen", "last_name"=>"Lin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "a@hotmail.com"], ["first_name", "Allen"], ["last_name", "Lin"], ["password_digest", "$2a$10$W8FI5MKKOCeWSY3Wd0wKquBYhylzx3O1T5uuuWeKVbmTAOgZYMj5C"], ["created_at", "2015-10-11 22:34:50.144282"], ["updated_at", "2015-10-11 22:34:50.144282"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/login
+Completed 302 Found in 71ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/login" for ::1 at 2015-10-11 18:34:50 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" IS NULL[0m
+Completed 200 OK in 76ms (Views: 75.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-11 18:34:58 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uhX40Pf1fgbjSNHvcC/p9oNWo/NbKQPjXKv6VR2TwrY2bFsT4oosaNSfrbuB/Rsj/UPh38o+I71MdROG3ysyog==", "email"=>"a@hotmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "a@hotmail.com"]]
+Redirected to http://localhost:3000/restaurants
+Completed 302 Found in 68ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-10-11 18:34:58 -0400
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mCuisineType Load (0.1ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCuisineType Load (0.2ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cuisine_types".* FROM "cuisine_types" WHERE "cuisine_types"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered restaurants/index.html.erb within layouts/application (23.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+Completed 200 OK in 116ms (Views: 107.7ms | ActiveRecord: 4.2ms)
